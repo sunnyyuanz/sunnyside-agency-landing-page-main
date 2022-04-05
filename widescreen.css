@@ -1,0 +1,344 @@
+.attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+.attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+nav{
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    height: 30px;
+}
+
+li{
+    list-style: none;
+    display:inline-block;
+    margin: auto 20px;
+}
+
+p{
+    font-size: 18px;
+    font-family: 'Barlow', sans-serif;
+}
+
+nav li a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    line-height: 30px;
+    
+}
+
+nav ul li a:hover{
+    display: block;
+    color:hsl(212, 27%, 19%);
+    z-index: 2;
+    font-family: 'Fraunces', serif;
+  background-color: white;
+    border-radius: 20px;
+    width: 140%;
+    text-align: center;
+    
+}
+
+nav .theme{
+    height: 100%;
+}
+
+.theme{
+    align-self: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.7em;
+    font-weight: 600;
+    color: white;
+    
+}
+h1{
+    color: white;
+    font-family: 'Fraunces', serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.5em;
+    letter-spacing: 6px;
+    text-transform:uppercase;
+    margin-top: 120px;
+}
+nav{
+    margin: 20px;
+}
+header{
+    background: url(images/desktop/image-header.jpg) no-repeat;
+    background-size: 100%;
+    height: 722px;
+
+
+}
+body{
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: auto;
+    word-spacing: 1px;
+}
+
+nav ul{
+    text-align: right;
+}
+
+main{
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(3,1fr) 180px 500px;
+    grid-template-areas:
+    "cell-1 cell-1 cell-1 cell-2 cell-2 cell-2"
+    "cell-3 cell-3 cell-3 cell-4 cell-4 cell-4"
+    "cell-5 cell-5 cell-5 cell-6 cell-6 cell-6"
+    "cell-header cell-header cell-header cell-header cell-header cell-header"
+    "cell-7 cell-7 cell-8 cell-8 cell-9 cell-9";
+
+    /* grid-template-rows: 600px 600px 600px 650px 446px; */
+}
+
+.articles,.skills{
+    /* display:grid; */
+    grid-template-columns: 1fr 1fr;
+}
+.articles{
+    background-color: white;
+}
+.bottompics{
+    display: flex;
+    max-width: 1440px;
+    height: 100%;
+
+}
+
+footer{
+    /* height: 300px; */
+    background-color: hsl(168, 39%, 60%);
+    /* width: 1438px; */
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 442px 300px;
+    grid-template-areas: 
+    "cell-1 cell-2 cell-3 cell-4"
+    "cell-footer cell-footer cell-footer cell-footer";
+    /* justify-content: center;
+    display: flex;
+    flex-direction: column; */
+    
+}
+section{
+    width: 1440px;
+}
+
+.text h2{
+    font-family: 'Fraunces', serif;
+    font-size: 2em;
+    width: 76%;
+}
+
+.text p{
+    font-family: 'Barlow', sans-serif;
+    line-height: 1.5em;
+    
+}
+.text{    
+    
+    margin: 133px;
+    color: hsl(212, 27%, 19%);
+}
+
+.text a{
+    text-decoration: none;
+    font-family: 'Fraunces', serif;
+    color: hsl(212, 27%, 19%);
+    text-transform: uppercase;
+}
+
+.hoverEffect::after {
+    content: '';
+    position: absolute;
+    bottom: -210px;
+    left: 127px;
+    width: 9%;
+    height: 0.5em;
+    background-color: hsl(51, 100%, 49%);
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+    border-radius: 20px;
+    z-index: -1;
+  }
+  .hoverEffect2::after {
+    content: '';
+    position: absolute;
+    bottom: -783px;
+    left: 838px;
+    width: 9%;
+    height: 0.5em;
+    background-color: hsl(7, 99%, 70%);
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+    border-radius: 20px;
+    z-index: -1;
+  }
+
+  .hoverEffect:hover::after,
+  .hoverEffect:focus::after,
+  .hoverEffect2:hover::after,
+  .hoverEffect2:focus::after{
+    opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+
+h3{
+    font-family: 'Fraunces', serif;
+    font-size: 1.5em;
+}
+.graphicDesign{
+    background: url(images/desktop/image-graphic-design.jpg) no-repeat;
+}
+.photography{
+    background: url(images/desktop/image-photography.jpg) no-repeat;
+}
+
+.graphicDesign,.photography{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.graphicDesign div, .photography div{
+    width: 53%;
+    text-align: center;
+    height: 40%;
+
+}
+
+.testimonials ul{
+    display: flex;
+    margin: 60px;
+    padding: 0;
+}
+footer img {
+    width: 100%;
+}
+footer .theme{
+    margin-left: 35px;
+    color: hsl(168, 34%, 41%);
+}
+
+footer ul li a{
+    color: hsl(168, 34%, 41%);
+}
+
+.graphicDesign div{
+    color:hsl(167, 40%, 24%);
+}
+.photography div{
+    color: hsl(198, 62%, 26%);
+}
+
+.cell-1{
+    grid-area: cell-1;
+}
+.cell-2{
+    grid-area: cell-2;
+}
+.cell-3{
+    grid-area: cell-3;
+}
+.cell-4{
+    grid-area: cell-4;
+}
+.cell-5{
+    grid-area: cell-5;
+}
+.cell-6{
+    grid-area: cell-6;
+}
+.cell-7{
+    grid-area: cell-7;
+    text-align: center;
+    width: 75%;
+    margin: 50px 30px;
+}
+.cell-8{
+    grid-area: cell-8;
+    text-align: center;
+    width: 75%;
+    margin: 50px 30px;
+}
+.cell-9{
+    grid-area: cell-9;
+    text-align: center;
+    width: 75%;
+    margin: 50px 30px;
+}
+.cell-header{
+    grid-area: cell-header;
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    color: hsl(232, 10%, 55%);
+    font-size: 1.2em;
+    letter-spacing: 0.3em;
+    text-align: center;
+    margin-top: 130px;
+
+}
+
+.clients img{
+    width: 20%;
+    border-radius: 50%;
+}
+
+.clients p{
+    margin-top: 50px;
+    
+}
+
+.clients p,.name,.job{
+    color: hsl(212, 27%, 19%);
+}
+
+.text a{
+    text-decoration: none;
+    font-family: 'Fraunces', serif;
+    color: hsl(212, 27%, 19%);
+}
+
+.name{
+    margin-top: 80px;
+    font-family: 'Fraunces', serif;
+}
+
+.job{
+    font-family: 'Barlow', sans-serif;
+}
+
+.cell-footer{
+    grid-area: cell-footer;
+    margin-top: 46px;
+}
+
+.cell-footer .nav{
+    margin-top: 30px;
+}
+
+.cell-footer .icons{
+    margin-top: 70px;
+}
+
+img.icon {
+    width: 80%;
+}
+
+.icons li{
+    margin: auto 10px;
+}
