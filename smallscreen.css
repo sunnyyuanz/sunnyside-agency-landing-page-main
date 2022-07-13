@@ -5,11 +5,49 @@
 .attribution a {
       color: hsl(228, 45%, 44%);
     }
+.menubar-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.line {
+    border-bottom: solid 2px #fff;
+    padding-top: 2px;
+    width: 20px;
+    padding-bottom: 2px;
+}
+
+.menubar-mobile{
+    background: none;
+    border: none;
+    width: 30%;
+    align-self: flex-end;
+}
+
+.menubar{
+    display: none;
+}
+
+.clicked {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -6px;
+    left: -5px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    padding-left: 0;
+    box-shadow: 2px 11px 26px rgb(0 0 0 / 20%);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    }
 
 nav{
     display: grid;
     grid-template-columns: 50% 1fr;
     height: 30px;
+    margin: 20px 0 20px 20px;
 }
 
 li{
@@ -25,22 +63,22 @@ p{
 
 nav li a{
     text-decoration: none;
-    color: white;
-    font-size: 15px;
-    font-family: 'Barlow', sans-serif;
+    color: rgb(146, 145, 145);
+    font-size: 18px;
+    font-family: 'Fraunces', serif;
     font-weight: 400;
-    line-height: 30px;
+    line-height: 45px;
     
 }
 
-nav ul li a:hover{
+nav ul li a:hover,nav ul li a:active{
     display: block;
     color:hsl(212, 27%, 19%);
     z-index: 2;
     font-family: 'Fraunces', serif;
-  background-color: white;
+  background-color: #fceb03;
     border-radius: 20px;
-    width: 140%;
+    width: 100%;
     text-align: center;
     
 }
@@ -52,7 +90,7 @@ nav .theme{
 .theme{
     align-self: center;
     font-family: 'Barlow', sans-serif;
-    font-size: 1.7em;
+    font-size: 1em;
     font-weight: 600;
     color: white;
     
@@ -62,18 +100,15 @@ h1{
     font-family: 'Fraunces', serif;
     text-align: center;
     font-weight: 700;
-    font-size: 2.5em;
+    font-size: 2em;
     letter-spacing: 6px;
     text-transform:uppercase;
-    margin-top: 120px;
-}
-nav{
-    margin: 20px;
+    margin-bottom: 40px;
 }
 header{
     background: url(images/desktop/image-header.jpg) no-repeat;
     background-size: 100%;
-    height: 722px;
+    height: 217px;
 
 
 }
@@ -90,17 +125,8 @@ nav ul{
 }
 
 main{
-    display:grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-template-rows: repeat(3,600px) 180px 500px;
-    grid-template-areas:
-    "cell-1 cell-1 cell-1 cell-2 cell-2 cell-2"
-    "cell-3 cell-3 cell-3 cell-4 cell-4 cell-4"
-    "cell-5 cell-5 cell-5 cell-6 cell-6 cell-6"
-    "cell-header cell-header cell-header cell-header cell-header cell-header"
-    "cell-7 cell-7 cell-8 cell-8 cell-9 cell-9";
-
-    /* grid-template-rows: 600px 600px 600px 650px 446px; */
+    display:flex;
+    flex-direction: column;
 }
 
 .articles,.skills{
@@ -123,11 +149,12 @@ footer{
     /* width: 1438px; */
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: 442px 300px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 195px 195px 300px;
     grid-template-areas: 
-    "cell-1 cell-2 cell-3 cell-4"
-    "cell-footer cell-footer cell-footer cell-footer";
+    "cell-1 cell-2"
+    "cell-3 cell-4"
+    "cell-footer cell-footer";
     /* justify-content: center;
     display: flex;
     flex-direction: column; */
@@ -139,19 +166,24 @@ section{
 
 .text h2{
     font-family: 'Fraunces', serif;
-    font-size: 2em;
-    width: 76%;
+    font-size: 1.7em;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .text p{
     font-family: 'Barlow', sans-serif;
     line-height: 1.5em;
+    margin-left: 10px;
+    margin-right: 10px;
     
 }
 .text{    
     
-    margin: 133px;
+    margin: 25px;
+
     color: hsl(212, 27%, 19%);
+    text-align: center;
 }
 
 .text a{
@@ -159,33 +191,16 @@ section{
     font-family: 'Fraunces', serif;
     color: hsl(212, 27%, 19%);
     text-transform: uppercase;
+    font-size: 15px;
+    
 }
 
-.hoverEffect::after {
-    content: '';
-    position: absolute;
-    bottom: -210px;
-    left: 127px;
-    width: 9%;
-    height: 0.5em;
-    background-color: hsl(51, 100%, 49%);
-    opacity: 0;
-    transition: opacity 300ms, transform 300ms;
-    border-radius: 20px;
-    z-index: -1;
+.hoverEffect{
+    border-bottom: 3px solid hsl(51, 100%, 49%);
   }
-  .hoverEffect2::after {
-    content: '';
-    position: absolute;
-    bottom: -783px;
-    left: 838px;
-    width: 9%;
-    height: 0.5em;
-    background-color: hsl(7, 99%, 70%);
-    opacity: 0;
-    transition: opacity 300ms, transform 300ms;
-    border-radius: 20px;
-    z-index: -1;
+
+  .hoverEffect2{
+    border-bottom: 3px solid hsl(7, 99%, 70%);
   }
 
   .hoverEffect:hover::after,
@@ -199,12 +214,16 @@ section{
 h3{
     font-family: 'Fraunces', serif;
     font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 0px;
 }
 .graphicDesign{
     background: url(images/desktop/image-graphic-design.jpg) no-repeat;
+    background-size: 100%;
 }
 .photography{
     background: url(images/desktop/image-photography.jpg) no-repeat;
+    background-size: 100%;
 }
 
 .graphicDesign,.photography{
@@ -215,10 +234,9 @@ h3{
 }
 
 .graphicDesign div, .photography div{
-    width: 53%;
+    width: 85%;
     text-align: center;
-    height: 40%;
-
+    padding-top: 142px;
 }
 
 .testimonials ul{
@@ -245,42 +263,14 @@ footer ul li a{
     color: hsl(198, 62%, 26%);
 }
 
-.cell-1{
-    grid-area: cell-1;
-}
-.cell-2{
-    grid-area: cell-2;
-}
-.cell-3{
-    grid-area: cell-3;
-}
-.cell-4{
-    grid-area: cell-4;
-}
-.cell-5{
-    grid-area: cell-5;
-}
-.cell-6{
-    grid-area: cell-6;
-}
-.cell-7{
-    grid-area: cell-7;
+.cell-7,
+.cell-8,
+.cell-9
+{
     text-align: center;
-    width: 75%;
     margin: 50px 30px;
 }
-.cell-8{
-    grid-area: cell-8;
-    text-align: center;
-    width: 75%;
-    margin: 50px 30px;
-}
-.cell-9{
-    grid-area: cell-9;
-    text-align: center;
-    width: 75%;
-    margin: 50px 30px;
-}
+
 .cell-header{
     grid-area: cell-header;
     font-family: 'Fraunces', serif;
@@ -289,7 +279,7 @@ footer ul li a{
     font-size: 1.2em;
     letter-spacing: 0.3em;
     text-align: center;
-    margin-top: 130px;
+    margin-top: 80px;
 
 }
 
@@ -322,6 +312,22 @@ footer ul li a{
     font-family: 'Barlow', sans-serif;
 }
 
+footer .cell-1{
+    grid-area: cell-1;
+}
+
+footer .cell-2{
+    grid-area: cell-2;
+}
+
+footer .cell-3{
+    grid-area: cell-3;
+}
+
+footer .cell-4{
+    grid-area: cell-4;
+}
+
 .cell-footer{
     grid-area: cell-footer;
     margin-top: 46px;
@@ -341,4 +347,13 @@ img.icon {
 
 .icons li{
     margin: auto 10px;
+}
+
+.gridimg.cell-2{
+    display: none;
+}
+
+.mobileImg img,
+.gridimg.cell-3 img{
+    width: 100%;
 }

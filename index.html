@@ -13,7 +13,7 @@
     href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;1,600&family=Fraunces:wght@700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" media="screen and (min-width:1439px)" href="widescreen.css">
-  <link rel="stylesheet" media="screen and (max-width:1438px)" href="smallcreen.css">
+  <link rel="stylesheet" media="screen and (max-width:1438px)" href="smallscreen.css">
   <title>Frontend Mentor | Sunnyside agency landing page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -24,17 +24,28 @@
   <header>
     <nav>
       <div class="theme">sunnyside</div>
-      <ul>
+      <div class="menubar-section">
+      <button role="menubar-mobile" class="menubar-mobile">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+</button>
+      <ul class="menubar">
         <li><a href="">About</a></li>
         <li><a href="">Services</a></li>
         <li><a href="">Projects</a></li>
         <li><a href="">Contact</a></li>
       </ul>
+    </div>
     </nav>
     <h1>We are creatives</h1>
   </header>
   <main>
     <!-- <section class="articles"> -->
+    <picture class="mobileImg">
+        <source srcset="images/mobile/image-transform.jpg" media="(max-width: 1439px)">
+        <img src="images/mobile/image-transform.jpg" alt="image-transform">
+    </picture>
     <div class="text cell-1">
       <h2>Transform your brand</h2>
       <p> We are a full-service creative agency specializing in helping brands grow fast.
@@ -154,6 +165,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="site.js"></script>
 </body>
 
 </html>

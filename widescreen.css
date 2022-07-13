@@ -164,7 +164,7 @@ section{
 .hoverEffect::after {
     content: '';
     position: absolute;
-    bottom: -210px;
+    bottom: -272px;
     left: 127px;
     width: 9%;
     height: 0.5em;
@@ -177,7 +177,7 @@ section{
   .hoverEffect2::after {
     content: '';
     position: absolute;
-    bottom: -783px;
+    bottom: -845px;
     left: 838px;
     width: 9%;
     height: 0.5em;
@@ -341,4 +341,12 @@ img.icon {
 
 .icons li{
     margin: auto 10px;
+}
+
+.mobileImg{
+    display: none;
+}
+
+.menubar-mobile{
+    display: none;
 }
